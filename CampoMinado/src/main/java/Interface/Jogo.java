@@ -62,7 +62,7 @@ public class Jogo extends javax.swing.JFrame {
             for(int linha=0;linha<=9;linha++){
                 // váriavel botão para guardar os dados provisorios
                 JButton botao = new JButton();
-                botao.setFont(new Font("Kristen ITC 15 Bold",Font.BOLD,15));
+                botao.setFont(new Font("COPPERPLATE GOTHIC Bold",Font.PLAIN,18));
                 botao.setBackground(new Color(197,213,235));
                 botao.setForeground(Color.WHITE);// COR DE TEXTO
                 
@@ -254,20 +254,21 @@ public class Jogo extends javax.swing.JFrame {
         painelCampo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         titulo.setBackground(new java.awt.Color(255, 255, 255));
-        titulo.setFont(new java.awt.Font("Old English Text MT", 0, 55)); // NOI18N
+        titulo.setFont(new java.awt.Font("Old English Text MT", 0, 65)); // NOI18N
         titulo.setForeground(new java.awt.Color(19, 51, 140));
         titulo.setText("Campo Minado");
 
-        btniniciar.setBackground(new java.awt.Color(30, 82, 146));
-        btniniciar.setFont(new java.awt.Font("Kristen ITC", 1, 15)); // NOI18N
+        btniniciar.setBackground(new java.awt.Color(5, 55, 117));
+        btniniciar.setFont(new java.awt.Font("Copperplate Gothic Bold", 0, 18)); // NOI18N
         btniniciar.setForeground(new java.awt.Color(255, 255, 255));
         btniniciar.setText("PLAY");
         btniniciar.addActionListener(this::btniniciarActionPerformed);
 
         tfTempo.setEditable(false);
-        tfTempo.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        tfTempo.setFont(new java.awt.Font("Segoe Script", 1, 12)); // NOI18N
         tfTempo.setText("00:00");
         tfTempo.addActionListener(this::tfTempoActionPerformed);
 
@@ -289,35 +290,34 @@ public class Jogo extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(63, 63, 63)
+                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(106, 106, 106)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btniniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(tfTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(painelCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
                         .addComponent(btniniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26)
+                        .addComponent(tfTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(painelCampo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(299, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tfTempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTempoActionPerformed
